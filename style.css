@@ -1,0 +1,93 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+  background: #222;
+  padding: 2em;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item a {
+  color: #76c2ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+.nav-sub {
+  font-size: 0.8em;
+  color: #aaa;
+  margin-top: 0.2em;
+}
+
+/* Project Sections */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4em 2em;
+  max-width: 1200px;
+  margin: auto;
+  border-bottom: 1px solid #333;
+}
+
+.media {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 2em;
+}
+
+.media img,
+.media video,
+.media iframe {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em;
+  background: #1a1a1a;
+  color: #aaa;
+}
+
+.rounded-img {
+  border-radius: 8px; /* same radius as your other images */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* optional, consistent shadow */
+  display: block; /* avoid inline image spacing issues */
+}
+

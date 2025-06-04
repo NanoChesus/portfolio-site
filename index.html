@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Game Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top of the page: About Me section -->
+  <header id="about">
+    <h1>Hi, I'm Jesus Barrios</h1>
+    <div class="media">
+          <img src="screenshots/portfolio-Picture.jpeg" alt="portfolio-Picture" style="margin-top: 1em; max-width: 49%;" />
+    </div>
+
+    <p>I create browser-based games, 3D experiences, and interactive worlds using JavaScript, Phaser, and WebGL tools.</p>
+
+    <!-- Navigation links that scroll to each project -->
+    <nav>
+      <div class="nav-item">
+        <a href="#shooter">Gallery Shooter</a>
+        <span class="nav-sub">Phaser Game</span>
+      </div>
+      <div class="nav-item">
+        <a href="#tiny">Tini-Venture</a>
+        <span class="nav-sub">3D World</span>
+      </div>
+      <div class="nav-item">
+        <a href="#character">3D Character</a>
+        <span class="nav-sub">Rigged Model</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Project Section: Gallery Shooter -->
+  <section class="section" id="shooter">
+    <div class="media">
+      <iframe src="https://nanochesus.github.io/Phaser-GalleryShooter/" height="300"></iframe>
+      <img src="screenshots/Mini-invasion-game.png" alt="Gallery Shooter Screenshot" style="margin-top: 1em;" />
+      <img src="screenshots/waveData.png" alt="Gallery Shooter Screenshot" style="margin-top: 1em;" />
+      <img src="screenshots/schedualWave.png" alt="Gallery Shooter Screenshot" style="margin-top: 1em;" />
+    </div>
+    <div class="content">
+      <h2>Graze Invaders </h2>
+      <p>This is a Galaga-like gallery shooter where you must defend your cattle from being abducted by alien invaders trying to starve America. Features include increasing difficulty, scorekeeping, and basic enemy AI. It was made in JavaScript using the Phaser API.</p>
+      <p><strong>Challenges:</strong> Some of the challenges I encountered while making this game were relearning JavaScript, learning the Phaser framework, and getting used to object-oriented coding. During the two-week development of this game, I improved my object-oriented skills by learning how to store data in objects and create custom functions/methods to manipulate that data for gameplay features.</p>
+      <p><strong>1:</strong> One of the major challenges was creating a flexible, data-driven enemy wave system to spawn enemy waves and make creating new levels more efficient. I achieved this by structuring wave data as objects, with keys describing delays, the number of enemies, and a "type" indicator. This allowed the `waveSpawner` method to know which enemies to spawn and which AI behavior to assign. This unique game logic made the game feel more dynamic and is some of the code I’m most proud of.</p>
+      <p><strong>2:</strong> Another learning opportunity came when I had to ensure each alien had a unique abduction target. I learned how to add enemies into arrays, check data within those arrays, and slice items from them to avoid duplicating targets. A simple but necessary challenge that helped me understand how to work with data efficiently.</p>
+    
+      <p><strong>Code Highlights:</strong></p>
+      <ul>
+        <li>Modular JavaScript architecture using Phaser scenes for easy scaling</li>
+        <li>Collision logic and object pooling for performance</li>
+        <li>Custome Data-driven wave spawning system</li>
+        <li>GitHub: <a href="https://github.com/NanoChesus/Phaser-GalleryShooter" target="_blank">   View the source code on GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+<!-- Project Section: Tini-Venture -->
+<section class="section" id="tiny">
+  <!-- Top Video -->
+  <div class="media">
+    <iframe
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/jBffnImuuTU" 
+      title="Tini-Venture Demo Video" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    
+    <!-- First screenshot (full-width with no paragraph) -->
+    <img src="screenshots/intro-dialogue.png" alt="Intro Dialogue Screenshot" style="margin-top: 1em;" />
+  </div>
+
+  <!-- Title and Description -->
+  <div class="content">
+    <h2>Tini-Venture</h2>
+    <p>Tini-Venture is a 3D environment where you're meant to experience a children's storybook in VR.</p>
+    <p>This project focuses on immersive worldbuilding and spatial storytelling in low-poly VR environments. Built using ShapesXR, Blender, and free assets from Sketchfab.  
+    My goal with this project was to build a beautiful and whimsical landscape with a simple story that guides you through the world.</p>
+    </p>
+    <p><strong>Design Focus:</strong></p>
+    <ul>
+      <li style="margin-bottom: 2em;">Point-and-click exploration using MetaControllers in VR</li>
+      <li style="margin-bottom: 2em;">Sound-reactive environments and ambient narrative cues</li>
+      <li style="margin-bottom: 2em;">Low-poly assets crafted and customized in Blender</li>
+      <li>Scenes designed in ShapesXR for spatial storytelling</li>
+    </ul>
+  </div>
+
+<!-- Screenshot + Paragraph Row 1 -->
+<div style="display: flex; align-items: flex-start; margin-top: 2em;">
+  <img src="screenshots/ant-unpainted.png" class="rounded-img" alt="Unpainted Ant Model" style="flex: 1; max-width: 49%; margin-right: 2em;" />
+  <div style="flex: 1; max-width: 600px;">
+  <p><strong>Unpainted Ant:</strong> This is the low-poly ant that inhabits the Tini world. They come in red and black types. Since many ants were needed per scene and the environment already used a large amount of bandwidth, we needed something that looked good but used minimal geometry.</p>
+  <p>The ant has no texture because it made importing simpler. We imported one colorless model and then applied red or black color (depending on ant type) in the editor, instead of importing two separate models.</p>
+  </div>
+</div>
+
+<!-- Screenshot + Paragraph Row 2 -->
+<div style="display: flex; align-items: flex-start; margin-top: 2em;">
+  <img src="screenshots/Guardbee-Blender.png" class="rounded-img" alt="Guard Bee in Blender" style="flex: 1; max-width: 49%; margin-right: 2em;" />
+  <div style="flex: 1; max-width: 600px;">
+  <p><strong>Guard Bee:</strong> This bee guards the hive, but the red ants prove too strong and defeat him. The model is painted and rigged so that it can be posed in a defeated state after the ants invade. I textured him to give a more intimidating look. There are only two guard bees, and I kept them low-poly to maintain visual consistency.</p>
+  </div>
+</div>
+
+</section>
+
+
+  <!-- Project Section: 3D Character -->
+  <section class="section" id="character">
+    <div class="media">
+      <video autoplay loop muted playsinline width="400">
+        <source src="assets/Chesus-running.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <img src="screenshots/chesus rigged and textured.png" alt="Character Screenshot 1" style="margin-top: 1em;" />
+      <img src="screenshots/Chesus-UV unwraped.png" alt="Character Screenshot 2" style="margin-top: 1em;" />
+            <img src="screenshots/head retopology.png" alt="Character Screenshot 3" style="margin-top: 1em;" />
+
+    </div>
+    <div class="content">
+      <h2>3D Character</h2>
+      <p>This is a showcase of 'Chesus' a 3D character model in a running animation</p>
+      <!-- <p></p> -->
+      <p>This was a challenging yet rewarding project. I started by learning Blender, gradually building the model from the body to the hands and feet, and then sculpting the head and retopologizing it. I later brought the mesh into ZBrush for texturing. Finally, I rigged and animated the model, overcoming many technical issues along the way. This process helped me grow my 3D modeling and animation skills significantly and giving me a love for the process.</p>
+    </div>
+  </section>
+
+  <!-- Footer at the bottom -->
+  <footer>
+    <p>Made with by Jesus Barrios • <a href="https://github.com/NanoChesus" target="_blank">GitHub</a></p>
+  </footer>
+
+</body>
+</html>
